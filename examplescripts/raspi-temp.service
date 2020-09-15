@@ -1,0 +1,12 @@
+[Unit]
+Description=Raspberry Pi Temperature to MQTT service
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=2
+ExecStart=/usr/bin/python3 <path_to_respi_temp_repo>/monitor.py -c <path_to_config_dir>
+
+[Install]
+WantedBy=multi-user.target

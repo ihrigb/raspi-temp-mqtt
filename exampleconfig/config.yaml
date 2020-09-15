@@ -1,0 +1,3 @@
+temp:
+  topic: pi/temperature
+  interval: 60

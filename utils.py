@@ -105,4 +105,4 @@ def get_temp_thread(temp_config, mqtt_config, run_event):
         logging.warn('No config')
         return {}
 
-    return [TempThread(ind, mqtt_config, run_event, **d) for ind, d in enumerate(temp_config)]
+    return TempThread(0, mqtt_config, run_event, **temp_config)

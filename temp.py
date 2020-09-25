@@ -8,7 +8,7 @@ import utils
 
 def read_temperature():
     temp = os.popen("vcgencmd measure_temp").readline()
-    return temp.replace("temp=", "")
+    return temp.replace("temp=", "").replace("'C", "")
 
 
 class TempThread(threading.Thread):
